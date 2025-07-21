@@ -1,4 +1,38 @@
 {
+  "name": "streamablehttp-stateful-mcp-server-nodejs",
+  "description": "A Stateful MCP server for streamable HTTP requests using Node.js",
+  "author": "Yifan Li",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HarveyYifanLi/Template-Nodejs-MCP-Server.git"
+  },
+  "keywords": [
+    "mcp",
+    "model context protocol",
+    "nodejs",
+    "server",
+    "streamable http",
+    "stateful",
+    "mongodb",
+    "express",
+    "cors",
+    "zod",
+    "node-cache"
+  ],
+  "version": "1.0.0",
+  "main": "app.js",
+  "files": [
+    "app.js",
+    "server/",
+    "tools/",
+    "resources/",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.13.2",
     "cors": "^2.8.5",
