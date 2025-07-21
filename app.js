@@ -15,9 +15,10 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: 'http://localhost:3000', // Adjust this to your mcp client app's origin
     exposedHeaders: ['mcp-session-id'],
-    allowedHeaders: ['Content-Type', 'mcp-session-id', 'mcp-protocol-version'], // MUST include 'mcp-protocol-version' otherwise preflight check will error out!!
+    allowedHeaders: ['Content-Type', 'mcp-session-id', 'mcp-protocol-version'],
+    // MUST include 'mcp-protocol-version' otherwise preflight check will error out!!
   })
 );
 
@@ -47,7 +48,6 @@ app.post('/mcp', async (req, res) => {
       onsessioninitialized: (sessionId) => {
         // Store the transport by session ID
         transportCache.set(sessionId, transport);
-        // console.log('****** sessionId generated:', sessionId);
       },
       // DNS rebinding protection is disabled by default for backwards compatibility.
       // When running this server locally, make sure to set it to true!!!
