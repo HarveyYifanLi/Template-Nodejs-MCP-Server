@@ -2,9 +2,9 @@
 
 ## Overview
 
-Most tutorials on MCP servers are using `stdio` protocols (i.e. not for remote connections) and are `Stateless` and very limited in functionaties (i.e. in terms of how to build Tools/Resources)...thus I decided to build and share this piece of robust and easy-to-extend template `Stateful` MCP Server.
+Most tutorials on MCP (Model Context Protocol) Servers are using `stdio` protocols (i.e. not for remote connections) and are `Stateless` and very limited in functionaties (e.g. in terms of how to build Tools/Resources)...thus I decided to build and share this robust and easy-to-extend template `Stateful` MCP Server with the `Streamable-http transport`.
 
-This is perhalps the easiest to use/extend fully-functioning template for you to build your own `Node.js` STATEFUL MCP (Model Context Protocol) Server using the `Streamable-http transport`, with a modular structure for `Tools` and `Resources` and an in-memory database (i.e.`Node-Cache`) for managing stateful `transport` objects which further boosts server performance.
+This is perhalps the easiest to use fully-functioning template for you to build your own `Node.js` STATEFUL MCP Server using the `Streamable-http transport`, with a modular folder structure for `Tools`, `Resources` and `server` and an in-memory database (i.e.`Node-Cache`) for managing stateful `transport` objects which further boosts server performance.
 
 It is designed for easy extension and integration, allowing you to add your own tools and resources for custom workflows.
 
@@ -12,7 +12,7 @@ Nevertheless I have also built some out-of-the-box Tools and Resources for you a
 
 1. **For Tools**:
 
-   By default, two simple yet realistic tools, i.e. a Data Base tool and an API tool, are loaded for you and you can directly extend the template for your own tools:
+   By default, two simple yet realistic tools, i.e. a Database tool and an API tool, are loaded for you and you can directly extend the template with your own tools:
 
 - `listMongoDatabasesAndCollections`: which allows you to List all databases and collections in a MongoDB Atlas cluster
 
@@ -20,7 +20,7 @@ Nevertheless I have also built some out-of-the-box Tools and Resources for you a
 
 2. **For Resources**:
 
-   By default, both ways of loading Resources are provided in the template for you. Namely, loading Dynamic a resource with parameters and loading a Static resource without parameters
+   By default, both ways of loading Resources are provided in the template for you. Namely, loading a Dynamic resource with parameters and loading a Static resource without parameters
 
 ---
 
@@ -30,7 +30,9 @@ Nevertheless I have also built some out-of-the-box Tools and Resources for you a
 
    ```sh
    git clone https://github.com/HarveyYifanLi/Template-Nodejs-MCP-Server.git
+
    cd Template-Nodejs-MCP-Server
+
    npm install
 
    (Note that depending on your directory permission setting, you might need to do:
@@ -164,12 +166,16 @@ Nevertheless I have also built some out-of-the-box Tools and Resources for you a
 
    - (I assume you already enabled GitHub Copilot to VSCode...if not plz do so)
      In VSCode, open `View/Command Palette`and under the dropdown, select the option called `MCP: Add Server...`
+
    - (See picture) Choose the HTTP option for connection.
      ![alt text](image.png)
+
    - (See picture) Enter this local MCP Server URL `http://localhost:3001/mcp` into the input box and press 'Enter' to Continue. Then Choose "Workspace" and press 'Enter' to Continue.
      ![alt text](image-1.png)
+
    - Then you should be able to see the listed MCP Tools available to use from this MCP server
      ![alt text](image-2.png)
+
    - Now you can directly interact with GitHub Copilot Agent to call/use these tools via natural language:
      ![alt text](image-3.png)
 
