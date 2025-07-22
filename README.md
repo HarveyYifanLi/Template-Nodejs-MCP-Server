@@ -2,9 +2,11 @@
 
 ## Overview
 
+**Spin up your own custom MCP Server in less than 5 mintues!!!🚀🚀🚀**
+
 Most tutorials on MCP (Model Context Protocol) Servers are using `stdio` protocols (i.e. not for remote connections) and are `Stateless` and very limited in functionaties (e.g. in terms of how to build Tools/Resources)...thus I decided to build and share this robust and easy-to-extend template `Stateful` MCP Server with the `Streamable-http transport`.
 
-This is perhalps the easiest to use fully-functioning template for you to build your own `Node.js` STATEFUL MCP Server using the `Streamable-http transport`, with a modular folder structure for `Tools`, `Resources` and `server` and an in-memory database (i.e.`Node-Cache`) for managing stateful `transport` objects which further boosts server performance.
+This is perhaps the easiest to use fully-functioning template for you to build your own `Node.js` STATEFUL MCP Server using the `Streamable-http transport`, with a modular folder structure for `Tools`, `Resources` and `server` and an in-memory database (i.e.`Node-Cache`) for managing stateful `transport` objects which further boosts server performance.
 
 It is designed for easy extension and integration, allowing you to add your own tools and resources for custom workflows.
 
@@ -47,7 +49,9 @@ Nevertheless I have also built some out-of-the-box Tools and Resources for you a
 
    The server will listen on port `3001` by default.
 
-   You can now directly connect to this MCP Server at `http://localhost:3001/mcp` from any MCP Host that runs a MCP Client. See next section for examples.
+   **Baaaaaammm, you are now done!! Your custom MCP Server is now up and ready to 🚀🚀🚀**
+
+   You can now directly connect to this MCP Server at `http://localhost:3001/mcp` from any MCP Host that runs a MCP Client. See the section `MCP Client Connection guide` for examples.
 
 ## Using Tools and Resources
 
